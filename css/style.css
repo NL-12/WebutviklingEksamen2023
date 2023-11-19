@@ -73,6 +73,15 @@
     text-align: center;
     position: relative;
 }
+#header-image div {
+    background-image: url("../img/pen-4337524_1280.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 45vh;
+    padding: 0;
+    margin: 0;
+    opacity: 0.60;
+}
 #header-image article {
     position: absolute;
     top: 40px;
@@ -101,20 +110,15 @@
     background-color: #252525;
     color: #e6bd43;
 }
+.text-styling-bold {
+    font-weight: bold;
+    color: black;
+}
 
 /* Generelle klasser som gjelder bilder og responsivitet. */
 .resp-img-w80 {
     width: 80%;
     height: auto;
-}
-.resp-img-fill {
-    background-image: url("../img/pen-4337524_1280.jpg");
-    background-size: cover;
-    width: 100vw;
-    height: 45vh;
-    padding: 0;
-    margin: 0;
-    opacity: 0.60;
 }
 
 /* Alle media queries. */
@@ -145,14 +149,13 @@
         height: auto;
         padding: 0 0.5rem;
     }
-}
-@media only screen and (min-width: 1200px) {
-    .resp-img-fill {
+    #header-image div {
         height: 50vh;
     }
 }
+
 @media only screen and (min-width: 1600px) {
-    .resp-img-fill {
+    #header-image div {
         height: 55vh;
     }
 }

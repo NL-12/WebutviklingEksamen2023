@@ -5,27 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&family=Playpen+Sans:wght@100;200;300&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>(Index.html)</title>
 </head>
-<body>
-    <header>
-        <img src="..." alt="...">
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Portfolio</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+<body id="sitewide">
+    <header id="sitewide__header">
+        <section id="header-content">
+            <figure>
+                <img class="resp-img-w80" src="img/logo/logo1.png" alt="...">
+            </figure>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p class="text-selected-gold">Home</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>Portfolio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>About</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <p class="text-button-gold">Contact</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <section id="header-image">
+                <div class="resp-img-fill"></div>
+                <article>
+                    <h1>Compeling headline</h1>
+                    <p>Vivamus ligula arcu, feugiat nec gravida et, scelerisque in lacus. Donec sed sapien dapibus odio porta ornare. Curabitur metus quam, vulputate a libero ut, convallis facilisis lacus.</p>
+                    <a href="#">
+                        <p class="text-button-gold">Read more about our services</p>
+                    </a>
+                </article>
+            </section>
+        </section>
     </header>
-    <main>
+    <main id="sitewide__main">
         <section>
-            <article>
-                <h1>Compeling headline</h1>
-                <p>Vivamus ligula arcu, feugiat nec gravida et, scelerisque in lacus. Donec sed sapien dapibus odio porta ornare. Curabitur metus quam, vulputate a libero ut, convallis facilisis lacus.</p>
-                <a href="#"><p>Read more about our services</p></a>
-            </article>
             <article>
                 <h2>Enganging subheading</h2>
                 <p>Mauris eget nibh ac arcu hendrerit fringilla. Maecenas pellentesque vehicula mollis. Etiam dapibus ullamcorper felis eget dictum. Fusce semper mauris quis tortor tempor sodales. Ut in finibus tellus, at vulputate diam.</p>
@@ -38,7 +66,7 @@
             </article>
         </section>
     </main>
-    <footer>
+    <footer id="#sitewide__footer">
         <section>
             <h3>Our Services</h3>
             <article>
@@ -81,7 +109,7 @@
             </nav>
         </section>
     </footer>
-    <aside>
+    <aside id="sitewide__aside">
         <i>Ikon</i>
     </aside>
 </body>

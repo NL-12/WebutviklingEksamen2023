@@ -1,0 +1,158 @@
+/* Selektor som gjelder for hele siden. */
+* {
+    box-sizing: border-box;
+}
+
+/* Grid og tilhørende ID-er for områdene. */
+#sitewide {
+    font-size: calc(0.8em + 0.8vw);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header-area" "main-area" "aside-area" "footer-area";
+    place-items: center;
+    width: 100%;
+    max-width: 1600px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playpen Sans', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+#sitewide__header {
+    grid-area: header-area;
+}
+#sitewide__main {
+    grid-area: main-area;
+}
+#sitewide__footer {
+    grid-area: footer-area;
+}
+#sitewide__aside {
+    grid-area: aside-area;
+}
+
+/* ID for CSS som omfatter header-en. */
+#header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+}
+#header-content nav {
+    flex-basis: 70%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+#header-content nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#header-content nav ul li {
+    padding: 0 0;
+}
+#header-content nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+#header-content figure {
+    flex-basis: 30%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+#header-content section {
+    flex-basis: 100%;
+}
+#header-content a {
+    text-decoration: none;
+}
+#header-image {
+    text-align: center;
+    position: relative;
+}
+#header-image article {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* Generelle klasser som gjelder styling av tekster. */
+.text-selected-gold {
+    text-decoration: underline;
+    text-decoration-color: #e6bd43;
+    color: #000;
+    text-decoration-thickness: 0.2rem;
+    font-weight: bold;
+}
+.text-button-gold {
+    background-color: #e6bd43;
+    color: #000;
+    font-weight: bold;
+    padding: 1rem;
+    width: fit-content;
+    margin: auto;
+}
+.text-button-gold:hover {
+    background-color: #252525;
+    color: #e6bd43;
+}
+
+/* Generelle klasser som gjelder bilder og responsivitet. */
+.resp-img-w80 {
+    width: 80%;
+    height: auto;
+}
+.resp-img-fill {
+    background-image: url("../img/pen-4337524_1280.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 45vh;
+    padding: 0;
+    margin: 0;
+    opacity: 0.60;
+}
+
+/* Alle media queries. */
+@media only screen and (min-width: 1000px) {
+    #header-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        position: relative;
+    }
+    #header-content nav {
+        text-align: right;
+    }
+    #header-content nav ul {
+        position: absolute; top: 2.5rem; right: 1rem;
+    }
+    #header-content nav ul li {
+        display: inline-block;
+        width: auto;
+        padding: 0 0.5rem;
+    }
+    #header-content figure {
+        text-align: initial;
+    }
+    #header-content figure img {
+        width: 35%;
+        height: auto;
+        padding: 0 0.5rem;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .resp-img-fill {
+        height: 50vh;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .resp-img-fill {
+        height: 55vh;
+    }
+}

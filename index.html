@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/6e7e32dccf.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&family=Playpen+Sans:wght@100;200;300&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>(Index.html)</title>
 </head>
@@ -41,10 +42,10 @@
                 </ul>
             </nav>
             <section id="header-image">
-                <div class="resp-img-fill"></div>
+                <div></div>
                 <article>
                     <h1>Compeling headline</h1>
-                    <p>Vivamus ligula arcu, feugiat nec gravida et, scelerisque in lacus. Donec sed sapien dapibus odio porta ornare. Curabitur metus quam, vulputate a libero ut, convallis facilisis lacus. <span class="text-styling-bold">Image by <a href="https://pixabay.com/users/rupixen-11154019/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4337524">Free stock photos from www.rupixen.com</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4337524">Pixabay</a></span></p>
+                    <p class="text-styling-margin-1r">Vivamus ligula arcu, feugiat nec gravida et, scelerisque in lacus. Donec sed sapien dapibus odio porta ornare. Curabitur metus quam, vulputate a libero ut, convallis facilisis lacus.</p>
                     <a href="#">
                         <p class="text-button-gold">Read more about our services</p>
                     </a>
@@ -53,64 +54,87 @@
         </section>
     </header>
     <main id="sitewide__main">
-        <section>
-            <article>
-                <h2>Enganging subheading</h2>
+        <section id="main-content">
+            <article style="text-align: center;" class="air4 text-styling-margin-3r">
+                <h2>Enganging subheading. What can you help your visitors with.</h2>
                 <p>Mauris eget nibh ac arcu hendrerit fringilla. Maecenas pellentesque vehicula mollis. Etiam dapibus ullamcorper felis eget dictum. Fusce semper mauris quis tortor tempor sodales. Ut in finibus tellus, at vulputate diam.</p>
             </article>
-            <article>
-                <img src="..." alt="...">
-                <h3>About Our Company</h3>
-                <p>Quisque aliquet sem vel facilisis pulvinar. Morbi nec tortor lacus. Fusce id ipsum massa. Aenean ultrices interdum metus at lobortis. Fusce molestie libero sit amet eros pharetra vehicula. Nunc eros sapien, posuere pulvinar sagittis ut, consequat id purus. </p>
-                <a><p>Read more about us</p></a>
-            </article>
+
+            <div id="main-content__about">
+                <figure>
+                    <img src="https://placehold.co/400x400" alt="...">
+                </figure>
+                <article>
+                    <h3>About Our Company</h3>
+                    <p>Quisque aliquet sem vel facilisis pulvinar. Morbi nec tortor lacus. Fusce id ipsum massa. Aenean ultrices interdum metus at lobortis. Fusce molestie libero sit amet eros pharetra vehicula. Nunc eros sapien, posuere pulvinar sagittis ut, consequat id purus. </p>
+                    <a>
+                        <p>Read more about us</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+        <section id="footer_icons">
+            <h3 class="text-styling-bold air2dot5">Our Services</h3>
+            <section>
+                <article>
+                    <i class="fa-solid fa-users"></i>
+                    <p class="text-styling-bold">Branding</p>
+                    <p class="footer_icons-margin">Unc vel orci sit amet urna mollis ultricies vel a ex.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p class="text-styling-bold">Branding</p>
+                    <p class="footer_icons-margin">Nunc sapien ante, gravida semper fringilla non, semper nec tortor.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-code"></i>
+                    <p class="text-styling-bold">Branding</p>
+                    <p class="footer_icons-margin">Duis ultrices imperdiet arcu, nec fringilla sapien condimentum a.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-wifi"></i>
+                    <p class="text-styling-bold">Branding</p>
+                    <p class="footer_icons-margin">Morbi scelerisque ex tellus, in elementum ipsum laoreet feugiat.</p>
+                </article>
+            </section>
         </section>
     </main>
-    <footer id="#sitewide__footer">
-        <section>
-            <h3>Our Services</h3>
-            <article>
-                <i>Icon</i>
-                <p>Branding</p>
-                <p>unc vel orci sit amet urna mollis ultricies vel a ex.</p>
-            </article>
-            <article>
-                <i>Icon</i>
-                <p>Branding</p>
-                <p>Nunc sapien ante, gravida semper fringilla non, semper nec tortor.</p>
-            </article>
-            <article>
-                <i>Icon</i>
-                <p>Branding</p>
-                <p>Duis ultrices imperdiet arcu, nec fringilla sapien condimentum a.</p>
-            </article>
-            <article>
-                <i>Icon</i>
-                <p>Branding</p>
-                <p>Morbi scelerisque ex tellus, in elementum ipsum laoreet feugiat.</p>
-            </article>
-        </section>
-        <section>
-            <h3>Sign up for our newsletter</h3>
+    <footer id="footer-content">
+        <section id="footer__newsletter">
+            <h2>Sign up for our newsletter</h2>
             <form>
-                <input type="text" placeholder="Nora@epost.no">
-                <p>Sign me up!</p>
+                <input id="footer__newsletter-text" type="text" placeholder="Nora@epost.no">
+                <input id="footer__newsletter-submit" type="submit" value="Sign me up!">
             </form>
         </section>
-        <section>
-            <img src="..." alt="..">
+        <nav>
+            <a href="#top">
+                <img src="img/logo/logo1.png" alt="..">
+            </a>
             <p>Companyrights Companyname 2023</p>
-            <nav>
-                <ul>
-                    <li><i>Ikon</i></li>
-                    <li><i>Ikon</i></li>
-                    <li><i>Ikon</i></li>
-                </ul>
-            </nav>
-        </section>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/?locale=nb_NO">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://no.linkedin.com/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </footer>
-    <aside id="sitewide__aside">
-        <i>Ikon</i>
+    <aside id="aside-icon">
+        <a href="#top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
     </aside>
 </body>
 </html>

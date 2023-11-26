@@ -1,5 +1,7 @@
 /* Selektor som gjelder for hele siden. */
 * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -18,16 +20,16 @@
     font-family: 'Playpen Sans', cursive;
     font-family: 'Roboto', sans-serif;
 }
-#sitewide__header {
+header {
     grid-area: header-area;
 }
-#sitewide__main {
+main {
     grid-area: main-area;
 }
-#sitewide__footer {
+footer {
     grid-area: footer-area;
 }
-#sitewide__aside {
+aside {
     grid-area: aside-area;
 }
 
@@ -71,23 +73,187 @@
 }
 #header-image {
     text-align: center;
+    width: 100vw;
+    height: 40vh;
     position: relative;
+    margin-top: 10.5rem;
+    margin-bottom: 10rem;
+    display: flex;
+    align-items: center;
 }
 #header-image div {
+    position: absolute;
+    /* Bilde fra https://pixabay.com/no/photos/penn-notisbok-notisblokk-dagbok-4337524/ av rupixen */
     background-image: url("../img/pen-4337524_1280.jpg");
     background-size: cover;
-    width: 100vw;
-    height: 45vh;
+    opacity: 0.60;
     padding: 0;
     margin: 0;
-    opacity: 0.60;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    height: 40vh;
 }
 #header-image article {
     position: absolute;
-    top: 40px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    vertical-align: middle;
+    top: auto;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#main-content__about {
+    background-color: #e6bd43;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+}
+#main-content__about img {
+    width: 80%;
+    height: auto;
+    padding: 0;
+}
+#main-content__about figure {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+}
+#main-content__about article {
+    flex-basis: 100%;
+    margin: 0 auto;
+    padding-right: 7rem;
+    padding-left: 7rem;
+    padding-bottom: 4rem;
+}
+#main-content__about a > p {
+    padding: 1.5rem;
+    border: 3.5px solid #000;
+    width: fit-content;
+    font-weight: bold;
+}
+
+
+#main__contact-us {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+}
+#main__contact-us {
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+#main__contact-us h3 {
+    flex-basis: 100%;
+    text-align: center;
+}
+#main__contact-us form, #main__contact-us article {
+    flex-basis: 50%;
+    margin: 0 auto;
+}
+
+#footer_icons {
+    text-align: center;
+}
+#footer_icons section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+}
+#footer_icons section article {
+    padding: 1.5rem;
+}
+#footer_icons section article {
+    flex-basis: 100%;
+    margin: 0 auto;
+}
+#footer_icons i {
+    font-size: 2rem;
+}
+.footer_icons-margin {
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+#footer__newsletter {
+    background-color: #ECECEC;
+    text-align: center;
+    padding: 1.2rem;
+    padding-bottom: 3rem;
+    padding-top: 3.4rem;
+    width: 100vw;
+}
+#footer__newsletter input {
+    display: inline-block;
+    padding: 1rem 0.8rem;
+    font-size: 1rem;
+}
+#footer__newsletter-text {
+    border: none;
+}
+#footer__newsletter-submit {
+    all: unset;
+    background-color: #e6bd43;
+    color: #000;
+    font-weight: bold;
+    padding: 1rem;
+    width: fit-content;
+    margin: auto;
+}
+
+#footer-content nav {
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+}
+#footer-content nav, #footer-content figure {
+    background-color: #252525;
+    width: 100vw;
+    text-align: center;
+}
+#footer-content p, #footer-content i {
+    color: #fff;
+}
+#footer-content i {
+    font-size: 2.3rem;
+}
+#footer-content nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+#footer-content nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+#footer-content img {
+    width: 25%;
+    height: auto;
+}
+
+/* Generelle klasser som gjelder "luft". */
+.spacing1 {
+    padding: 1rem;
+}
+.air2dot5 {
+    margin: 2.5rem
+}
+.air3 {
+    margin: 3rem
+}
+.air4 {
+    margin: 4rem
+}
+.air4-nt {
+    margin: 4rem;
+    margin-top: 0;
 }
 
 /* Generelle klasser som gjelder styling av tekster. */
@@ -110,18 +276,61 @@
     background-color: #252525;
     color: #e6bd43;
 }
+.text-button-black-border {
+    border: 3.5px solid #000;
+}
 .text-styling-bold {
     font-weight: bold;
     color: black;
 }
+.text-styling-margin-1r {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.text-styling-margin-2r {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+.text-styling-margin-3r {
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+/* Generelle klasser som gjelder block elementer. */
+.block-styling-gold {
+    background-color: #e6bd43;
+}
 
 /* Generelle klasser som gjelder bilder og responsivitet. */
+.resp-img-w70 {
+    width: 70%;
+    height: auto;
+}
 .resp-img-w80 {
     width: 80%;
     height: auto;
 }
 
 /* Alle media queries. */
+
+/*@media only screen and (min-width: 650px) {
+}*/
+
+#aside-icon {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #252525;
+    padding: 1.3rem;
+    padding-right: 1.1rem;
+    padding-left: 1.1rem;
+    border-radius: 0.5rem;
+}
+#aside-icon i {
+    color: #fff;
+    font-size: 2rem;
+}
+
 @media only screen and (min-width: 1000px) {
     #header-content {
         display: flex;
@@ -149,13 +358,87 @@
         height: auto;
         padding: 0 0.5rem;
     }
+
+    #header-image {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        height: 55vh;
+    }
     #header-image div {
-        height: 50vh;
+        height: 55vh;
+    }
+    #header-image article {
+        padding: 0 15rem;
+    }
+
+    #footer_icons section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        position: relative;
+        margin-right: 7rem;
+        margin-left: 7rem;
+    }
+    #footer_icons section article {
+        flex-basis: 20%;
+        margin: 0 auto;
+    }
+    .footer_icons-margin {
+        margin: 0;
+    }
+
+
+    #main-content__about {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    #main-content__about figure {
+        flex-basis: 40%;
+        padding: 3rem;
+    }
+    #main-content__about img {
+        width: 100%;
+    }
+    #main-content__about article {
+        flex-basis: 60%;
+        padding: 3rem 3.5rem 3.5rem 0;
+    }
+
+    #footer-content nav {
+        display: flex;
+        direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 5.5rem;
+        padding-bottom: 5rem;
+    }
+    #footer-content img {
+        width: 80%;
+        height: auto;
+    }
+    #footer-content p {
+        text-align: center;
+    }
+    #footer-content ul {
+        text-align: center;
+        margin-right: 1.5rem;
+    }
+}
+@media only screen and (min-width: 1300px) {
+    #main-content__about article {
+        padding: 6.5rem 3.5rem 3.5rem 0;
     }
 }
 
 @media only screen and (min-width: 1600px) {
-    #header-image div {
-        height: 55vh;
-    }
+
+}
+
+/* Kode hentet fra: https://stackoverflow.com/a/55867559 */
+@media (hover: hover), (-ms-high-contrast:none) {
 }

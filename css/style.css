@@ -76,12 +76,13 @@ aside {
     width: 100vw;
     height: 40vh;
     position: relative;
-    margin-top: 10.5rem;
-    margin-bottom: 10rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
     display: flex;
     align-items: center;
 }
-#header-image div {
+#header-image:before {
+    content: "";
     position: absolute;
     /* Bilde fra https://pixabay.com/no/photos/penn-notisbok-notisblokk-dagbok-4337524/ av rupixen */
     background-image: url("../img/pen-4337524_1280.jpg");
@@ -137,7 +138,11 @@ aside {
     width: fit-content;
     font-weight: bold;
 }
-
+#main-content__subheading {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin: 0.5rem 3rem;
+}
 
 #main__contact-us {
     display: flex;
@@ -161,18 +166,23 @@ aside {
 
 #footer_icons {
     text-align: center;
+    margin-top: 3.5rem;
 }
-#footer_icons section {
+#footer_icons {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: baseline;
     position: relative;
 }
-#footer_icons section article {
+#footer_icons article {
     padding: 1.5rem;
 }
-#footer_icons section article {
+#footer_icons h3 {
+    flex-basis: 100%;
+    margin: 0 auto;
+}
+#footer_icons article {
     flex-basis: 100%;
     margin: 0 auto;
 }
@@ -364,14 +374,14 @@ aside {
         margin-bottom: 0rem;
         height: 55vh;
     }
-    #header-image div {
+    #header-image:before {
         height: 55vh;
     }
     #header-image article {
-        padding: 0 15rem;
+        padding: 0 10vw;
     }
 
-    #footer_icons section {
+    #footer_icons {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -380,7 +390,11 @@ aside {
         margin-right: 7rem;
         margin-left: 7rem;
     }
-    #footer_icons section article {
+    #footer_icons h3 {
+        flex-basis: 100%;
+        margin: 0 auto;
+    }
+    #footer_icons article {
         flex-basis: 20%;
         margin: 0 auto;
     }
@@ -407,6 +421,11 @@ aside {
     #main-content__about article {
         flex-basis: 60%;
         padding: 3rem 3.5rem 3.5rem 0;
+    }
+
+    #main-content__subheading {
+        padding: 2.5rem 5rem;
+        margin: 5rem 5rem;
     }
 
     #footer-content nav {

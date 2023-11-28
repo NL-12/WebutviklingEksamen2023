@@ -33,6 +33,15 @@ aside {
     grid-area: aside-area;
 }
 
+/*
+#t video {
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+    opacity: 0.60;
+}
+*/
+
 /* ID for CSS som omfatter header-en. */
 #header-content {
     display: flex;
@@ -84,19 +93,20 @@ aside {
 #header-image:before {
     content: "";
     position: absolute;
-    /* Bilde fra https://pixabay.com/no/photos/penn-notisbok-notisblokk-dagbok-4337524/ av rupixen */
-    background-image: url("../img/pen-4337524_1280.jpg");
+    /* Bilde fra https://pixabay.com/no/photos/penn-notisbok-notisblokk-dagbok-4337521/ av rupixen */
+    background-image: url("../img/pen-4337521_1280.jpg");
     background-size: cover;
     opacity: 0.60;
     padding: 0;
     margin: 0;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     margin-left:auto;
     margin-right:auto;
     height: 40vh;
 }
 #header-image article {
+    text-align: center;
     position: absolute;
     vertical-align: middle;
     top: auto;
@@ -150,18 +160,85 @@ aside {
     justify-content: space-between;
     align-items: baseline;
     position: relative;
-}
-#main__contact-us {
-    margin-right: 3rem;
-    margin-left: 3rem;
-}
-#main__contact-us h3 {
-    flex-basis: 100%;
-    text-align: center;
+    margin-top: 3rem;
+    background-color: #F4F4F4;
 }
 #main__contact-us form, #main__contact-us article {
-    flex-basis: 50%;
+    padding: 3rem;
+    padding-left: 3rem;
+}
+#main__contact-us h2 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+#main__contact-us form, #main__contact-us article {
+    flex-basis: 100%;
     margin: 0 auto;
+    padding-bottom: 0;
+}
+#main__contact-us form {
+    display: inline-block;
+}
+#input__name, #input__subject, #input__message {
+    border: 0;
+    width: 100%;
+    padding: 1rem;
+}
+#input__name, #input__subject {
+    height: 100%;
+}
+#input__message {
+    height: 50vw;
+    max-height: 300px
+}
+#main__contact-us article {
+    margin-bottom: 2rem;
+}
+#main__contact-us iframe {
+    flex-basis: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100vw;
+    height: 25vh;
+    border: 0;
+}
+#main__contact-us-submit {
+    all: unset;
+    display: inline-block;
+    background-color: #e6bd43;
+    color: #000;
+    font-weight: bold;
+    padding: 1rem;
+    width: fit-content;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+#main__clients {
+    text-align: center;
+    background-color: #e6bd43;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 2.5rem 0;
+    padding-top: 4rem;
+}
+#main__clients h2 {
+    text-align: center;
+    flex-basis: 100%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+#main__clients figure {
+    flex-basis: 50%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+#main__clients img {
+    width: 80%;
+    height: auto;
 }
 
 #footer_icons {
@@ -178,9 +255,13 @@ aside {
 #footer_icons article {
     padding: 1.5rem;
 }
-#footer_icons h3 {
+#footer_icons h2 {
     flex-basis: 100%;
     margin: 0 auto;
+    margin-bottom: 2.5rem;
+}
+#footer_icons h3 {
+    margin: 1.5rem;
 }
 #footer_icons article {
     flex-basis: 100%;
@@ -390,9 +471,12 @@ aside {
         margin-right: 7rem;
         margin-left: 7rem;
     }
-    #footer_icons h3 {
+    #footer_icons h2 {
         flex-basis: 100%;
         margin: 0 auto;
+    }
+    #footer_icons h3 {
+        margin: 1.5rem;
     }
     #footer_icons article {
         flex-basis: 20%;
@@ -402,15 +486,19 @@ aside {
         margin: 0;
     }
 
-
+    #main-content__subheading {
+        padding: 2.5rem 5rem;
+        margin: 5rem 5rem;
+    }
+    #input__message {
+        max-height: 250px
+    }
+    
     #main-content__about {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: flex-start;
         padding: 0;
     }
 
+   
     #main-content__about figure {
         flex-basis: 40%;
         padding: 3rem;
@@ -423,10 +511,27 @@ aside {
         padding: 3rem 3.5rem 3.5rem 0;
     }
 
-    #main-content__subheading {
-        padding: 2.5rem 5rem;
-        margin: 5rem 5rem;
+    
+    #main-content__about {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5rem;
     }
+    #main__contact-us form, #main__contact-us article {
+        flex-basis: 49%;
+        margin: 0 auto;
+        padding-bottom: 0;
+        gap: 0;
+    }
+    #input__message {
+        height: 15vw;
+    }
+    #main__contact-us-submit {
+        margin-bottom: 1rem;
+    }
+
 
     #footer-content nav {
         display: flex;
@@ -446,6 +551,24 @@ aside {
     #footer-content ul {
         text-align: center;
         margin-right: 1.5rem;
+    }
+
+    #main__clients {
+        text-align: center;
+        display: block;
+        padding: 4.5rem;
+        padding-top: 6.5rem;
+        margin-top: 2.5rem;
+    }
+    #main__clients h2 {
+        margin-bottom: 4rem;
+    }
+    #main__clients figure {
+        display: inline;
+        padding: 0 1.5rem;
+    }
+    #main__clients img {
+        width: 10%;
     }
 }
 @media only screen and (min-width: 1300px) {

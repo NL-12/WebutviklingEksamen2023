@@ -12,11 +12,12 @@
     font-size: calc(0.8em + 0.8vw);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "header-area" "main-area" "aside-area" "footer-area";
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header-area" "main-area" "footer-area";
     place-items: center;
     width: 100%;
     max-width: 1600px;
+    margin: 0 auto;
     font-family: 'Bebas Neue', sans-serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Playpen Sans', cursive;
@@ -31,9 +32,6 @@ main {
 }
 footer {
     grid-area: footer-area;
-}
-aside {
-    grid-area: aside-area;
 }
 
 /* Følgende er brukt for headeren, selve ID-en er brukt på header-tagen. */
@@ -437,7 +435,6 @@ aside {
 
 /* Media queries for når skjermen er 1000 piksler eller større. */
 @media only screen and (min-width: 1000px) {
-
     /* --- CSS som gjelder for alle sidene. --- */
     #header-content {
         display: flex;
@@ -519,6 +516,12 @@ aside {
     #footer-content ul {
         text-align: center;
         margin-right: 1.5rem;
+    }
+
+    /* Grid skal på desktop ha tre kolonner. */
+    #sitewide {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "header-area header-area header-area" "main-area main-area main-area" "footer-area footer-area footer-area"
     }
 
     /* --- CSS som gjelder for index.html siden. --- */

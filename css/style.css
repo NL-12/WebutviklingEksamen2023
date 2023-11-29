@@ -189,7 +189,7 @@ footer {
     margin: auto;
     text-decoration: none;
 }
-.button-gold:visisted {
+.button-gold:visited {
     text-decoration: none;
     color: #000;
 }
@@ -350,9 +350,6 @@ footer {
 /* Kode fra https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/ */
 #portfolio-gallery img {
     transition: all .4s ease-in-out;
-}
-#portfolio-gallery img:hover {
-    transform: scale(1.1);
 }
 #portfolio-gallery section {
     display: flex;
@@ -539,7 +536,7 @@ footer {
     
     #footer-content nav {
         display: flex;
-        direction: row;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding-top: 5.5rem;
@@ -653,11 +650,11 @@ footer {
         background-color: #252525;
         color: #e6bd43;
     }
-    .button-gold:visisted:hover {
+    .button-gold:visited:hover {
         background-color: #252525;
         color: #e6bd43;
     }
-    #input-submit:visisted:hover {
+    #input-submit:visited:hover {
         background-color: #252525;
         color: #e6bd43;
     }
@@ -665,7 +662,7 @@ footer {
         background-color: #252525;
         color: #e6bd43;
     }
-    #footer-index-submit:visisted:hover {
+    #footer-index-submit:visited:hover {
         background-color: #252525;
         color: #e6bd43;
     }
@@ -673,8 +670,11 @@ footer {
         background-color: #252525;
         color: #e6bd43;
     }
-    #portfolio-gallery li > a:visisted:hover {
+    #portfolio-gallery li > a:visited:hover {
         background-color: #252525;
         color: #e6bd43;
     }
+    #portfolio-gallery img:hover {
+        transform: scale(1.1);
+}
 }

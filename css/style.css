@@ -1,11 +1,13 @@
-/* Selektor som gjelder for hele siden. */
+/* --- CSS som gjelder for alle sidene. --- */
+
+/* Selektor som setter border-box på alle elementer. Dette er så elementer skal oppføre seg riktig i forhold til responsivitet. */
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-/* Grid og tilhørende ID-er for områdene. */
+/* #sitewide ID brukes på body og er både for å sette opp en grid og å gi elementer felles ting som font. */
 #sitewide {
     font-size: calc(0.8em + 0.8vw);
     display: grid;
@@ -20,6 +22,7 @@
     font-family: 'Playpen Sans', cursive;
     font-family: 'Roboto', sans-serif;
 }
+/* grid-area for de forskjellige områdene på siden. */
 header {
     grid-area: header-area;
 }
@@ -33,16 +36,7 @@ aside {
     grid-area: aside-area;
 }
 
-/*
-#t video {
-    width: 100vw;
-    height: 80vh;
-    object-fit: cover;
-    opacity: 0.60;
-}
-*/
-
-/* ID for CSS som omfatter header-en. */
+/* Følgende er brukt for headeren, selve ID-en er brukt på header-tagen. */
 #header-content {
     display: flex;
     flex-direction: column;
@@ -73,6 +67,10 @@ aside {
     margin: 0 auto;
     margin-top: 1.5rem;
     text-align: center;
+}
+#header-content figure img {
+    width: 100%;
+    height: auto;
 }
 #header-content section {
     flex-basis: 100%;
@@ -116,191 +114,7 @@ aside {
     margin-right:auto;
 }
 
-#main-content__about {
-    background-color: #e6bd43;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: baseline;
-}
-#main-content__about img {
-    width: 80%;
-    height: auto;
-    padding: 0;
-}
-#main-content__about figure {
-    flex-basis: 100%;
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 3rem;
-    padding-bottom: 2.5rem;
-}
-#main-content__about article {
-    flex-basis: 100%;
-    margin: 0 auto;
-    padding-right: 7rem;
-    padding-left: 7rem;
-    padding-bottom: 4rem;
-}
-#main-content__about a > p {
-    padding: 1.5rem;
-    border: 3.5px solid #000;
-    width: fit-content;
-    font-weight: bold;
-}
-#main-content__subheading {
-    text-align: center;
-    padding: 1.5rem 2rem;
-    margin: 0.5rem 3rem;
-}
-
-#main__contact-us {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: baseline;
-    position: relative;
-    margin-top: 3rem;
-    background-color: #F4F4F4;
-}
-#main__contact-us form, #main__contact-us article {
-    padding: 3rem;
-    padding-left: 3rem;
-}
-#main__contact-us h2 {
-    flex-basis: 100%;
-    text-align: center;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-#main__contact-us form, #main__contact-us article {
-    flex-basis: 100%;
-    margin: 0 auto;
-    padding-bottom: 0;
-}
-#main__contact-us form {
-    display: inline-block;
-}
-#input__name, #input__subject, #input__message {
-    border: 0;
-    width: 100%;
-    padding: 1rem;
-}
-#input__name, #input__subject {
-    height: 100%;
-}
-#input__message {
-    height: 50vw;
-    max-height: 300px
-}
-#main__contact-us article {
-    margin-bottom: 2rem;
-}
-#main__contact-us iframe {
-    flex-basis: 100%;
-    display: inline-block;
-    margin: 0 auto;
-    width: 100vw;
-    height: 25vh;
-    border: 0;
-}
-#main__contact-us-submit {
-    all: unset;
-    display: inline-block;
-    background-color: #e6bd43;
-    color: #000;
-    font-weight: bold;
-    padding: 1rem;
-    width: fit-content;
-    margin: auto;
-    margin-top: 0.5rem;
-}
-
-#main__clients {
-    text-align: center;
-    background-color: #e6bd43;
-    display: flex;
-    align-items: center;
-    flex-flow: row wrap;
-    padding: 2.5rem 0;
-    padding-top: 4rem;
-}
-#main__clients h2 {
-    text-align: center;
-    flex-basis: 100%;
-    margin: 0 auto;
-    padding-bottom: 2rem;
-}
-#main__clients figure {
-    flex-basis: 50%;
-    padding: 1rem;
-    margin: 0 auto;
-}
-#main__clients img {
-    width: 80%;
-    height: auto;
-}
-
-#footer_icons {
-    text-align: center;
-    margin-top: 3.5rem;
-}
-#footer_icons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: baseline;
-    position: relative;
-}
-#footer_icons article {
-    padding: 1.5rem;
-}
-#footer_icons h2 {
-    flex-basis: 100%;
-    margin: 0 auto;
-    margin-bottom: 2.5rem;
-}
-#footer_icons h3 {
-    margin: 1.5rem;
-}
-#footer_icons article {
-    flex-basis: 100%;
-    margin: 0 auto;
-}
-#footer_icons i {
-    font-size: 2rem;
-}
-.footer_icons-margin {
-    margin-right: 3rem;
-    margin-left: 3rem;
-}
-
-#footer__newsletter {
-    background-color: #ECECEC;
-    text-align: center;
-    padding: 1.2rem;
-    padding-bottom: 3rem;
-    padding-top: 3.4rem;
-    width: 100vw;
-}
-#footer__newsletter input {
-    display: inline-block;
-    padding: 1rem 0.8rem;
-    font-size: 1rem;
-}
-#footer__newsletter-text {
-    border: none;
-}
-#footer__newsletter-submit {
-    all: unset;
-    background-color: #e6bd43;
-    color: #000;
-    font-weight: bold;
-    padding: 1rem;
-    width: fit-content;
-    margin: auto;
-}
-
+/* Følgende er brukt for footeren, selve ID-en er brukt på footer-tagen. */
 #footer-content nav {
     padding-top: 3.5rem;
     padding-bottom: 2rem;
@@ -329,141 +143,29 @@ aside {
     height: auto;
 }
 
-/* Generelle klasser som gjelder "luft". */
-.spacing1 {
-    padding: 1rem;
-}
-.air2dot5 {
-    margin: 2.5rem
-}
-.air3 {
-    margin: 3rem
-}
-.air4 {
-    margin: 4rem
-}
-.air4-nt {
-    margin: 4rem;
-    margin-top: 0;
-}
-
-/* Generelle klasser som gjelder styling av tekster. */
-.text-selected-gold {
-    text-decoration: underline;
-    text-decoration-color: #e6bd43;
-    color: #000;
-    text-decoration-thickness: 0.2rem;
-    font-weight: bold;
-}
-.text-button-gold {
+.button-gold {
     background-color: #e6bd43;
     color: #000;
     font-weight: bold;
     padding: 1rem;
     width: fit-content;
     margin: auto;
-}
-.text-button-gold:hover {
-    background-color: #252525;
-    color: #e6bd43;
-}
-.text-button-black-border {
-    border: 3.5px solid #000;
-}
-.text-styling-bold {
-    font-weight: bold;
-    color: black;
-}
-.text-styling-margin-1r {
-    margin-right: 1rem;
-    margin-left: 1rem;
-}
-.text-styling-margin-2r {
-    margin-right: 2rem;
-    margin-left: 2rem;
-}
-.text-styling-margin-3r {
-    margin-right: 3rem;
-    margin-left: 3rem;
-}
-
-/* Generelle klasser som gjelder block elementer. */
-.block-styling-gold {
-    background-color: #e6bd43;
-}
-
-/* Generelle klasser som gjelder bilder og responsivitet. */
-.resp-img-w70 {
-    width: 70%;
-    height: auto;
-}
-.resp-img-w80 {
-    width: 80%;
-    height: auto;
-}
-
-/* Alle media queries. */
-
-/*@media only screen and (min-width: 650px) {
-}*/
-
-#job-gallery ul {
-    list-style: none;
-    padding: 0;
-}
-#job-gallery li {
-    display: inline-block;
-    margin: 0 0.3rem;
-}
-#job-gallery li > a {
     text-decoration: none;
 }
-#job-gallery li > a > p {
+.button-gold:visisted {
+    text-decoration: none;
     color: #000;
-    border: 0.2rem solid #000;
-    padding: 0.5rem;
 }
-#job-gallery h2, #job-gallery h3 {
-    border-bottom: #e6bd43 solid 0.3rem;
-    padding-bottom: 0.8rem;
-}
-#job-gallery {
-    padding: 0 2rem;
-}
-#job-gallery img {
-    width: 100%;
-    height: auto;
+.text-highlighted {
+    text-decoration: underline;
+    text-decoration-color: #e6bd43;
+    color: #000;
+    text-decoration-thickness: 0.2rem;
+    font-weight: bold;
 }
 
-/* Kode fra https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/ */
-#job-gallery img {
-    transition: all .4s ease-in-out;
-}
-#job-gallery img:hover {
-    transform: scale(1.1);
-}
-
-#job-gallery section {
-    display: flex;
-    align-items: baseline;
-    justify-content: start;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-#job-gallery h3 {
-    flex-basis: 100%;
-    margin: 0 auto;
-    margin-bottom: 3rem;
-}
-#job-gallery article {
-    min-width: 200px;
-    max-width: 692px;
-    flex-grow: 1;
-    flex-basis: 30%;
-    padding: 1rem;
-}
-
-#aside-icon {
+/* Følgende er brukt for aside, selve ID-en er brukt på aside-tagen. */
+#aside-to-top {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
@@ -473,12 +175,270 @@ aside {
     padding-left: 1.1rem;
     border-radius: 0.5rem;
 }
-#aside-icon i {
+#aside-to-top i {
     color: #fff;
     font-size: 2rem;
 }
 
+/* Styling for ikon-rad som er brukt på både index.html og about.html. */
+#services-display {
+    text-align: center;
+    margin-top: 3.5rem;
+}
+#services-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+}
+#services-display article {
+    padding: 1.5rem;
+}
+#services-display h2 {
+    flex-basis: 100%;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+}
+#services-display h3 {
+    margin: 1.5rem;
+}
+#services-display article {
+    flex-basis: 100%;
+    margin: 0 auto;
+}
+#services-display i {
+    font-size: 2rem;
+}
+#services-display p {
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+/* --- CSS som gjelder for index.html siden. --- */
+#index-subheading {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin: 0.5rem 3rem;
+}
+
+#index-about {
+    background-color: #e6bd43;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+}
+#index-about img {
+    width: 80%;
+    height: auto;
+    padding: 0;
+}
+#index-about figure {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+}
+#index-about article {
+    flex-basis: 100%;
+    margin: 0 auto;
+    padding-right: 7rem;
+    padding-left: 7rem;
+    padding-bottom: 4rem;
+}
+#index-about a  {
+    padding: 1.5rem;
+    border: 3.5px solid #000;
+    width: fit-content;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#footer-index-newsletter {
+    background-color: #ECECEC;
+    text-align: center;
+    padding: 1.2rem;
+    padding-bottom: 3rem;
+    padding-top: 3.4rem;
+    width: 100vw;
+}
+#footer-index-newsletter input {
+    display: inline-block;
+    padding: 1rem 0.8rem;
+    font-size: 1rem;
+}
+#footer-index-text {
+    border: none;
+}
+#footer-index-submit {
+    all: unset;
+    background-color: #e6bd43;
+    color: #000;
+    font-weight: bold;
+    padding: 1rem;
+    width: fit-content;
+    margin: auto;
+}
+
+/* --- CSS som gjelder for portfolio.html siden. --- */
+#portfolio-gallery ul {
+    list-style: none;
+    padding: 0;
+}
+#portfolio-gallery li {
+    display: inline-block;
+    margin: 0 0.3rem;
+}
+#portfolio-gallery li > a {
+    text-decoration: none;
+    color: #000;
+    border: 0.2rem solid #000;
+    padding: 0 0.5rem;
+    margin: 0;
+    display: block;
+}
+#portfolio-gallery h2, #portfolio-gallery h3 {
+    border-bottom: #e6bd43 solid 0.3rem;
+    padding-bottom: 0.8rem;
+}
+#portfolio-gallery {
+    padding: 0 2rem;
+}
+#portfolio-gallery img {
+    width: 100%;
+    height: auto;
+}
+/* Kode fra https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/ */
+#portfolio-gallery img {
+    transition: all .4s ease-in-out;
+}
+#portfolio-gallery img:hover {
+    transform: scale(1.1);
+}
+#portfolio-gallery section {
+    display: flex;
+    align-items: baseline;
+    justify-content: start;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#portfolio-gallery h3 {
+    flex-basis: 100%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+#portfolio-gallery article {
+    min-width: 200px;
+    max-width: 692px;
+    flex-grow: 1;
+    flex-basis: 30%;
+    padding: 1rem;
+}
+
+/* --- CSS som gjelder for about.html siden. --- */
+#about-contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+    margin-top: 3rem;
+    background-color: #F4F4F4;
+}
+#about-contact form, #about-contact article {
+    padding: 3rem;
+    padding-left: 3rem;
+}
+#about-contact form, #about-contact article {
+    flex-basis: 100%;
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+#about-contact form {
+    display: inline-block;
+}
+#input-name, #input-subject, #input-message {
+    border: 0;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+#input-name, #input-subject {
+    height: 100%;
+}
+#input-message {
+    height: 50vw;
+    max-height: 300px
+}
+#about-contact article {
+    margin-bottom: 2rem;
+}
+#about-contact iframe {
+    flex-basis: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100vw;
+    height: 25vh;
+    border: 0;
+}
+#about-contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+    margin-top: 3rem;
+    background-color: #F4F4F4;
+}
+#about-contact form, #about-contact article {
+    padding: 3rem;
+    padding-left: 3rem;
+}
+#input-submit {
+    all: unset;
+    display: inline-block;
+    background-color: #e6bd43;
+    color: #000;
+    font-weight: bold;
+    padding: 1rem;
+    width: fit-content;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+#about-clients {
+    text-align: center;
+    background-color: #e6bd43;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 2.5rem 0;
+    padding-top: 4rem;
+}
+#about-clients h2 {
+    text-align: center;
+    flex-basis: 100%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+#about-clients figure {
+    flex-basis: 50%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+#about-clients img {
+    width: 80%;
+    height: auto;
+}
+
+/* --- CSS som er betinget / påvirket av media queries. --- */
+
+/* Media queries for når skjermen er 1000 piksler eller større. */
 @media only screen and (min-width: 1000px) {
+
+    /* --- CSS som gjelder for alle sidene. --- */
     #header-content {
         display: flex;
         flex-flow: row wrap;
@@ -505,7 +465,6 @@ aside {
         height: auto;
         padding: 0 0.5rem;
     }
-
     #header-image {
         margin-top: 0rem;
         margin-bottom: 0rem;
@@ -518,7 +477,7 @@ aside {
         padding: 0 10vw;
     }
 
-    #footer_icons {
+    #services-display {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -527,66 +486,21 @@ aside {
         margin-right: 7rem;
         margin-left: 7rem;
     }
-    #footer_icons h2 {
+    #services-display h2 {
         flex-basis: 100%;
         margin: 0 auto;
     }
-    #footer_icons h3 {
+    #services-display h3 {
         margin: 1.5rem;
     }
-    #footer_icons article {
+    #services-display article {
         flex-basis: 20%;
         margin: 0 auto;
     }
-    .footer_icons-margin {
+    #services-display p {
         margin: 0;
     }
-
-    #main-content__subheading {
-        padding: 2.5rem 5rem;
-        margin: 5rem 5rem;
-    }
-    #input__message {
-        max-height: 250px
-    }
     
-    #main-content__about {
-        padding: 0;
-    }
-    #main-content__about figure {
-        flex-basis: 40%;
-        padding: 3rem;
-    }
-    #main-content__about img {
-        width: 100%;
-    }
-    #main-content__about article {
-        flex-basis: 60%;
-        padding: 3rem 3.5rem 3.5rem 0;
-    }
-    #main-content__about {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 5rem;
-    }
-
-
-    #main__contact-us form, #main__contact-us article {
-        flex-basis: 49%;
-        margin: 0 auto;
-        padding-bottom: 0;
-        gap: 0;
-    }
-    #input__message {
-        height: 15vw;
-    }
-    #main__contact-us-submit {
-        margin-bottom: 1rem;
-    }
-
-
     #footer-content nav {
         display: flex;
         direction: row;
@@ -607,34 +521,103 @@ aside {
         margin-right: 1.5rem;
     }
 
-    #main__clients {
+    /* --- CSS som gjelder for index.html siden. --- */
+    #index-subheading {
+        padding: 2.5rem 5rem;
+        margin: 5rem 5rem;
+    }
+
+    #index-about {
+        padding: 0;
+    }
+    #index-about figure {
+        flex-basis: 40%;
+        padding: 3rem;
+    }
+    #index-about img {
+        width: 100%;
+    }
+    #index-about article {
+        flex-basis: 60%;
+        padding: 3rem 3.5rem 3.5rem 0;
+    }
+    #index-about {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5rem;
+    }
+
+    /* --- CSS som gjelder for about.html siden. --- */
+    #about-clients {
         text-align: center;
         display: block;
         padding: 4.5rem;
         padding-top: 6.5rem;
         margin-top: 2.5rem;
     }
-    #main__clients h2 {
-        margin-bottom: 4rem;
-    }
-    #main__clients figure {
+    #about-clients figure {
         display: inline;
         padding: 0 1.5rem;
     }
-    #main__clients img {
+    #about-clients img {
         width: 10%;
     }
+    #about-contact form, #about-contact article {
+        flex-basis: 49%;
+        margin: 0 auto;
+        padding-bottom: 0;
+        gap: 0;
+    }
+    #input-message {
+        height: 15vw;
+        max-height: 250px
+    }
+    #input-submit {
+        margin-bottom: 1rem;
+    }
 }
+
+/* Media queries for når skjermen er 1300 piksler eller større. */
 @media only screen and (min-width: 1300px) {
-    #main-content__about article {
+    #index-about article {
         padding: 6.5rem 3.5rem 3.5rem 0;
     }
 }
 
-@media only screen and (min-width: 1600px) {
-
-}
-
-/* Kode hentet fra: https://stackoverflow.com/a/55867559 */
+/* Media queries for når skjermen støtter muspekere. Kode hentet fra: https://stackoverflow.com/a/55867559 */
 @media (hover: hover), (-ms-high-contrast:none) {
+    .button-gold:hover {
+        background-color: #252525;
+        color: #e6bd43;
+    }
+    #input-submit:hover {
+        background-color: #252525;
+        color: #e6bd43;
+    }
+    .button-gold:visisted:hover {
+        background-color: #252525;
+        color: #e6bd43;
+    }
+    #input-submit:visisted:hover {
+        background-color: #252525;
+        color: #e6bd43;
+    }
+    #footer-index-submit:hover {
+        background-color: #252525;
+        color: #e6bd43;
+    }
+    #footer-index-submit:visisted:hover {
+        background-color: #252525;
+        color: #e6bd43;
+    }
+    #portfolio-gallery li > a:hover {
+        background-color: #252525;
+        color: #e6bd43;
+    }
+    #portfolio-gallery li > a:visisted:hover {
+        background-color: #252525;
+        color: #e6bd43;
+    }
 }
